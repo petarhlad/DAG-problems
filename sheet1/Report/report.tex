@@ -137,6 +137,17 @@ So $M(P,Q) = 6.5-1-1.5 = 4$.
 \end{figure}
 \section{d}
 
+We can subdivide $P+Q$ into a translate of $P$, a translate of $Q$ and three parallelograms as seen in Figure \ref{fig:ls}.\\
+
+We get $M(P,Q)$ by subtracting the area of $P$ and $Q$ to the area of $P+Q$. $M(P,Q)$ is sum of the area of the remaining three parallelograms.
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics{Images/LatticeDivision.png} % requires the graphicx package
+   \caption{Subdivision of $P+Q$ into a translate of $P$, a translate of $Q$ and three parallelograms.}
+   \label{fig:ls}
+\end{figure}
+
 \section{e}
 Suppose we have two lattice polygons $P$ and $Q$. Construct a polynomial $f$ as follows: starting with $f=0$, for every vertex $p_{i} = (a_{i1},a_{i2})$ of $P$ add a term to $f$ of the from $x^{a_{i1}}y^{a_{i2}}$. In this way, New($f) = P$. Analogous, construct a $g$ so that New($g)=Q$. Note that this construction is fine, since $a_{ij}$ are integers because $P,Q$ are lattices polygons. Because $P$ and $Q$ are polygons, we only have two dimensions and can use Bernstein's Theorem.\\
 Using Bernstein's Theorem we find that M(New($f$),New($g)) = M(P,Q)= $ (number of solutions of the system $f(x,y)=0,g(x,y)=0$), which is an integer. 
