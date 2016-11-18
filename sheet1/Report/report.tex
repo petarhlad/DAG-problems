@@ -90,6 +90,28 @@
 %	Problem 9
 %----------------------------------------------------------------------------------------
 \section{a}
+$P+Q$ is convex if all line segments joining two points of the polytope is contained in the polytope. And we will prove that it happens only if $P$ and $Q$ are convex.
+
+$$P+Q\subset \mathbb{R}^d \quad convex \Longleftrightarrow \forall s_1,s_2 \in P+Q \quad s_1 s_2 \subset P+Q$$
+
+Take two points $s_1,s_2\in P+Q$. Then, $\exists p_1,p_2 \!\! \in \!\! P$, $\exists q_1,q_2 \!\! \in \!\! Q$ such that $s_1 = p_1 + q_1$ and $s_2= p_2 + q_2$.\\
+
+Let $r\in s_1 s_2$ be any point of the segment. Then, $\exists \lambda \in [0,1]$ such that $r = \lambda s_1 + \left( 1 - \lambda \right) s_2$.\\
+
+Expanding it:
+
+$r = \lambda s_1 + \left( 1 - \lambda \right) s_2 = \lambda \left(p_1 + q_1 \right) + \left( 1 - \lambda \right) \left( p_2 + q_2 \right) = \lambda p_1 + \left( 1 - \lambda \right) p_2 + \lambda q_1 + \left( 1 - \lambda \right) q_2$\\
+
+If $P$ and $Q$ are convex, then $p_1p_2 \subset P$ and $q_1q_2 \subset Q$, so $\exists p \!\! \in \!\! P$ s.t. $p = \lambda p_1 + \left( 1 - \lambda \right) p_2$ and $\exists q \!\! \in \!\! Q$ s.t. $q = \lambda q_1 + \left( 1 - \lambda \right) q_2$.\\
+
+So $r = p + q \in P+Q \quad \forall r \in s_1s_2 \Longrightarrow s_1s_2 \subset P+Q$ for any $s_1,s_2 \in P+Q$
+
+Finally, $P+Q$ is convex if $P$ and $Q$ is convex.\\
+
+Translating $P$ and $Q$ in $\mathbb{R}^d$ is the same as summing a single point to each. Let $p',q' \in \mathbb{R}^d$ be the points that represent the translation of $P$ and $Q$. Then $(P+p') + (Q+q') = \{p + q : p\in P + p',\,q\in Q + q'\} = \{p + p' + q + q' : p\in P,\,q\in Q\} = (P+Q)+p'+q'$
+
+So $P+Q$ translates with the composition of the translations of $P$ and $Q$.
+
 \section{b}
 \begin{lemma}
 New($fg$)=New($f$)+New($g$) for polynomials $f(x)=\sum_{i=1}^{m}{c_{i}x_{1}^{a_{i1}}x_{2}^{a_{i2}}\ldots x_{d}^{a_{id}}}$ and $g(x)=\sum_{i=1}^{p}{d_{i}x_{1}^{b_{i1}}x_{2}^{b_{i2}}\ldots x_{d}^{b_{id}}}$
