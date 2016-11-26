@@ -97,7 +97,22 @@ X^{**} &= \{y\in \mathbb{R}^{d} : \langle x,y\rangle \leq 1, \forall x \in X^{*}
 Now because $\forall x\in X,\forall y \in X^{*} : \langle x,y\rangle \leq 1 \implies x\in X^{**}$. Also clearly $0\in X^{**}$. Since $X^{**}$ closed and convex we find $conv(X\cup 0)\subset X^{**}$.
 
 The separation theorem says that for a closed set $Z$: $conv(Z)=\bigcap$(all closed halfspaces that contain Z).
+So $conv(X\cup 0)$ is the intersection of all closed halfspace that contain $0$ and $X$.
 
+\section{$C_4(7)$}
+\subsection{(a)}
+We will first calculate the $f$-vector of $C_4(7)$.
+\begin{itemize}
+\item $f_0=7$
+\item $f_1= \binom{7}{2} = 21$, because $C_4(7)$ is neighborly
+\item $f_3 = 14$, we counted this in class, using Gale's evenness criterium.
+\end{itemize}
+
+Define $h_k = \sum_{i\geq k}^{d} f_{i}(-1)^{(i-k)}\binom{k}{i} $, with $f_{-1}=f_{d}=1$. Then the Dehn-Somerville equations learn us that $h_i=h_{d-i}$.\\
+We find $h_0=f_0-f_1+f_2-f_3+f_4=7-21+f_2-14+1=f_2-27$ and $h_4=f_4=1$. Now $h_0=h_4\implies f_3=28$.
+
+So $f(C_4(7))=(7,21,28,14)$. And we find $f(C_4(7)^*)=(14,28,21,7)$
+\section{$24$-cell}
 
 
 \end{document}
