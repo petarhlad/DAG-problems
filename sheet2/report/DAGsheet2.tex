@@ -23,7 +23,7 @@
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 %\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
 \usepackage[english]{babel} % English language/hyphenation
-\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{amsmath,amsfonts,amsthm,amssymb} % Math packages
 
 \usepackage{sectsty} % Allows customizing section commands
 %\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
@@ -88,6 +88,26 @@
 
 \section{Matousek}
 \subsection{2}
+\subsubsection{Problem description}
+We will use Lemma 5.1.2 (Duality preserves incidences) ii) in Matousek: 
+Let $p$ be a point of $\mathbb{R}^{d}$ distinct from the origin and let $h$ be a hyperplane in $\mathbb{R}^d$ not containing the origin. Let $h^-$ stand for the closed half-space bounded by $h$ and containing the origin, while $h^+$ denotes the other closed half-space bounded by $h$. That is, if $h=\{x\in\mathbb{R}^d: \langle a,x\rangle=1\}$, then $h^-=\{x\in\mathbb{R}^d: \langle a,x\rangle\leq1\}$.
+Then $p\in h^- \iff D_0(h)\in D_0(p)^-$.\\
+
+Let us consider a pentagon which contains the origin. Let $v_i = D_0(l_i)$, where $l_i$ is the line containing the side $a_ia_{i+1}$. Then the points dual to the lines intersecting the pentagon $a_1a_2\ldots a_5$ fill exactly the exterior of the convex pentagon $P_{ex} = v_1v_2\ldots v_5$.
+
+\subsection{solution}
+So take a point $p$ outside $P_{ex}$. Because $P_{ex}$ is convex there exists an edge $v_iv_{i+1}$ (we assume here that $v_{5+1}=v_1$) with supporting line $h$, such that $p$ lies in the halfplane $h^+$ (not containing the origin). Because duality preserves incidences we find $D_0(h)\in D_0(p)^+$. Now since $D_0(h)=D_0(D_0(a_{i+1}))=a_{i+1}$, we find that the line segment $[0,a_{i+1}]\cap D_0(p)\neq \varnothing$. So $D_0(p)$ intersects $P_ex$.
+
+Why is $v_iv_{i+1}=D_0(a_{i+1})$?
+\begin{align*}
+v_i&=D_0(a_{i}a_{i+1}),& v_j=D_0(a_{i+1}a_{i+2})\\
+\implies &D_0(v_i)=a_ia_{i+1},& D_0(v_j)=a_{i+1}a_{i+2}\\
+\implies &D_0(v_i)D_0(v_j)=a_{i+1}\\
+\implies &D_0(a_{i+1})=v_iv_j
+\end{align*}
+
+Now analogous to the first part we can take a point $p$ inside $P_ex$ then we find $v_{i}v_{i+1}$ with a supporting line $h$ such that $p\in h^-$. We find $D_0(h)=a_{i+1}\in D_0(p)^-$ So that $D_0(p)$ intersects the line $a_{i+1}$ outside the pentagon. Because $D_0(p)$ is perpendicular to $a_{i+1}$ it will never intersect the convex polygon
+
 \subsection{3}
 \begin{align*}
 X^{*} &= \{y\in \mathbb{R}^{d} : \langle x,y\rangle \leq 1, \forall x \in X\}\\
@@ -108,10 +128,10 @@ We will first calculate the $f$-vector of $C_4(7)$.
 \item $f_3 = 14$, we counted this in class, using Gale's evenness criterium.
 \end{itemize}
 
-Define $h_k = \sum_{i\geq k}^{d} f_{i}(-1)^{(i-k)}\binom{k}{i} $, with $f_{-1}=f_{d}=1$. Then the Dehn-Somerville equations learn us that $h_i=h_{d-i}$.\\
+Define $h_k = \sum_{i\geq k}^{d} f_{i}(-1)^{(i-k)}\binom{k}{i} $, with $f_{-1}=f_{d}=1$. Then the Dehn-Sommerville equations learn us that $h_i=h_{d-i}$.\\
 We find $h_0=f_0-f_1+f_2-f_3+f_4=7-21+f_2-14+1=f_2-27$ and $h_4=f_4=1$. Now $h_0=h_4\implies f_3=28$.
 
-So $f(C_4(7))=(7,21,28,14)$. And we find $f(C_4(7)^*)=(14,28,21,7)$
+So $f(C_4(7))=(7,21,28,14)$. And we find $f(C_4(7)^\Delta)=(14,28,21,7)$
 \section{$24$-cell}
 
 
