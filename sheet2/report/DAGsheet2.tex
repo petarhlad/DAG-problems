@@ -147,7 +147,7 @@ Nottice that $(i,j)$ and $(i,-j)$ as the segment $(i,j)(i,-j)$ has length 2 unli
 
 So, each vertex has 8 adjacent vertices. As every edge is double counted, the total number of edges is $\frac{24 \cdot 8}{2} = 96$.
 
-\textbf{2-dimmensional faces (faces):} choose any 3 $a_1,a_2,a_3$ such that $a_1 \sim a_2, a_2 \sim a_3, a_1 \nsim a_3$.
+\textbf{2-dimmensional faces (faces):} choose any 3 vertices $a_1,a_2,a_3$ such that $a_1 \sim a_2, a_2 \sim a_3, a_1 \nsim a_3$.
 So if $a_1 = (i,j)$ with $\vert i \vert \neq \vert j \vert$, then $a_2 = (j,k)$ with $\vert i \vert \neq \vert k \vert \neq \vert j \vert$ and $a_3 = (k,l)$ with $\vert l \vert \neq \vert i \vert, \vert j \vert, \vert k \vert$. The vertex $a_4=(l,j)$ and $a_5=(i,k)$ are adjacent to $a_1,a_2,a_3$. This proves that for any two adjacent edges, either they are in the same triangle, or they are in two adjacent triangles. So all faces are triangles.
 
 Every pair of adjacent vertices has 4 vertices that are adjacent to both. As all faces are triangles and every triangle is counted 4 times for each edge, the total number of triangles is $\frac{96 \cdot 4}{4} = 96$ 
@@ -177,6 +177,14 @@ A face $(i,j)(j,k)(k,i)$ is a face of a cell formed by $\{(i',j'),(i',k'),(i',l'
 
 \underline{Self-polar-duality} \\
 
-We'll now flip the notation. Now, the vertices are noted as $\{i,j,k,l\}$. As seen in the face lattice (two cells share a face if the indices of the face are contained in the indices of both cells at the same time) two vertices $\{i,j,k,l\},\{i',j',k',l'\}$ are adjacent if and only if they share three indices. 
+Every cell is adjacent to other 8 cells (one for each face). So, each vertex of the dual polytope is adjacent to other 8 vertices.
+
+Every face is adjacent to 12 other faces (three for each edge as seen before). So, each edge of the dual polytope is adjacent to other 12 edges. It is the same as in the primal polytope as each vertex has 8 adjacent vertices, but 4 are common. So $2 \cdot 8-4=12$
+
+Every edge is adjacent to 12 other edges. So, every face in the dual polytope is adjacent to other 12 vertices. Explained just before.
+
+Every point is adjacent to other 8 points. So, every cell in the dual polytope is adjacent to other 8 cells. Same as in the primal polytope.
+
+The dual polytope has the same number of faces in all dimensions and the same adjacency as the primal polytope. The 24-cell is self-polar-dual.
 
 \end{document}
