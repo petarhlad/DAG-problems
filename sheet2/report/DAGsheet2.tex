@@ -137,22 +137,48 @@ So $f(C_4(7))=(7,21,28,14)$. And we find $f(C_4(7)^\Delta)=(14,28,21,7)$
 
 $$ P = conv\left\lbrace \pm e_i \pm e_j : 1\leq i,j\leq 4,\, i\neq j \right\rbrace$$
 
-\textbf{Notation}: we'll note all vertices as pairs $(i,j)$ such that $ -4 \leq i,j \leq 4$ and $i \neq 0 \neq j$ and $i \neq j$. Note that $(i,j)=(j,i)$ as $e_i+e_j = e_j + e_i$.
+\underline{Half-spaces and hyperplanes} \\
 
-\textbf{0-dimmensional faces (vertices):} All $4 \cdot {4 \choose 2} = 24$ vertices $(i,j)$
+One can easily check that the next 24 half-spaces are valid restrictions for our polytopes and that the intersection of the boundary with the polytope gives 6 vertices.
 
-\textbf{1-dimmensional faces (edges):} Two vertices are adjacent if they share exactly one common vector from the basis. That is:
+For $(x_1, x_2, x_3, x_4) \in \mathbb{R}^4$:
+
+$$   
+	\begin{array}{rcl}
+      x_i & \leq & 1 \\
+     -x_i & \leq & 1 \\
+     a_1x_1 + a_2x_2 + a_3x_3 + a_4x_4 & \leq & 2 \quad a_1,a_2,a_3,a_4 \in \{ -1, 1 \}
+	\end{array}
+$$
+
+The hyperplanes are the same equations with equality.
+
+Any intersection $\{\pm x_i = 1\} \cap \{\pm x_j = 1 \}$ (different hyperplanes) gives either 1 point ($i\neq j$) or it's empty ($i=j$).
+
+$\{x_i = 1\} \cap \{  \sum a_j x_j = 2 : a_i = 1\}$ gives the three vertices of a ridge. 32 different ridges.
+
+$\{-x_i = 1\} \cap \{  \sum a_j x_j = 2 : a_i = -1\}$ also gives the three vertices of a ridge. 32 different ridges.
+
+$\{\sum a_j x_j = 2\} \cap \{  \sum b_j x_j = 2: \exists ! k, (a_i = b_i, i\neq k) \wedge (a_k = -b_k) \}$ also gives the three vertices of a ridge. As coefficients share only one sign, this gives us ${4 \choose 3} \cdot 2^3 = 32$.
+
+From this intersections, one can easily deduce that two vertices share an edge if they share only one component and with same sign.\\
+
+\textbf{Notation}: we'll note all vertices as pairs $(i,j)$ such that $ -4 \leq i,j \leq 4$ and $i \neq 0 \neq j$ and $\vert i \vert \neq \vert j \vert$. Note that $(i,j)=(j,i)$ as $e_i+e_j = e_j + e_i$.
+
+\textbf{0-dimensional faces (vertices):} All $4 \cdot {4 \choose 2} = 24$ vertices $(i,j)$
+
+\textbf{1-dimensional faces (edges):} Two vertices are adjacent if they share exactly one common vector from the basis. That is:
 $$(i,j) \sim (k,l) \iff (i=k,\vert j \vert \neq \vert l \vert) \vee (i=l,\vert j \vert \neq \vert k \vert) \vee (j=k,\vert i \vert \neq \vert l \vert) \vee (j=l,\vert i \vert \neq \vert k \vert)$$
 Nottice that $(i,j)$ and $(i,-j)$ as the segment $(i,j)(i,-j)$ has length 2 unlike the edges that have length $\sqrt{2}$.
 
 So, each vertex has 8 adjacent vertices. As every edge is double counted, the total number of edges is $\frac{24 \cdot 8}{2} = 96$.
 
-\textbf{2-dimmensional faces (faces):} choose any 3 vertices $a_1,a_2,a_3$ such that $a_1 \sim a_2, a_2 \sim a_3, a_1 \nsim a_3$.
+\textbf{2-dimensional faces (faces):} choose any 3 vertices $a_1,a_2,a_3$ such that $a_1 \sim a_2, a_2 \sim a_3, a_1 \nsim a_3$.
 So if $a_1 = (i,j)$ with $\vert i \vert \neq \vert j \vert$, then $a_2 = (j,k)$ with $\vert i \vert \neq \vert k \vert \neq \vert j \vert$ and $a_3 = (k,l)$ with $\vert l \vert \neq \vert i \vert, \vert j \vert, \vert k \vert$. The vertex $a_4=(l,j)$ and $a_5=(i,k)$ are adjacent to $a_1,a_2,a_3$. This proves that for any two adjacent edges, either they are in the same triangle, or they are in two adjacent triangles. So all faces are triangles.
 
-Every pair of adjacent vertices has 4 vertices that are adjacent to both. As all faces are triangles and every triangle is counted 4 times for each edge, the total number of triangles is $\frac{96 \cdot 4}{4} = 96$ 
+Every pair of adjacent vertices $(i,j),(j,k)$ has 3 other vertices $(i,k),(j,l),(j,-l)$ that are adjacent to both. As all faces are triangles and every triangle is counted 3 times (once per edge), the total number of triangles is $\frac{96 \cdot 3}{3} = 96$ 
 
-\textbf{3-dimmensional faces (cells):} choose any face $a_1,a_2,a_3$.
+\textbf{3-dimensional faces (cells):} choose any face $a_1,a_2,a_3$.
 
 Then $a_1 = (i,j), a_2=(j,l), a_3=(l,i)$ for some $i,j,l$ such that $1 \leq \vert i \vert, \vert j \vert, \vert l \vert \leq 4$ and $\vert i \vert \neq \vert l \vert \neq \vert j \vert \neq \vert i \vert$. Choose $ 1 \leq \vert k \vert \leq 4 $ such that $\vert k \vert \neq \vert i \vert, \vert j \vert, \vert l \vert$ (there are only two possibilities: $k$ and $-k$). Consider the vertices $(j,k)$, $(i,k)$ and $(l,k)$. As we can see in Figure 1, the graph of this set of points is 4-regular, where all faces are triangles, there are 8 faces, and each vertex is incident to 4 faces. It is the graph of a regular octahedron.
 
@@ -165,7 +191,7 @@ So, all cells are regular octahedrons.
 \label{fig:face}
 \end{figure}
 
-Given a vertex $(i,j)$, there are 4 possible pairs $\vert k \vert \neq \vert l \vert$ such that $\vert k \vert, \vert l \vert \neq \vert i \vert, \vert j \vert$ and that $(i,j),(i,k),(i,l),(j,k),(j,l),(k,l)$ form an octahedron. So every vertex is in 4 octahedrons. As all cells are counted 4 times, the total number of cells is $\frac{24 \cdot 4}{4} = 24$ \\
+Each ridge lies in 2 facets. If all facets are octahedra then we count 2 facets per ridge that are counted 8 times (once per each face of the octahedron. That gives us $\frac{96 \cdot 2}{8} = 24$ facets. \\
 
 \underline{Face lattice} \\
 
