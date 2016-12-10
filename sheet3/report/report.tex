@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+%\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm,amssymb} % Math packages
+
+\usepackage{sectsty} % Allows customizing section commands
+%\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\allsectionsfont{\centering}
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+%\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage{caption}
+
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+
+%\floatname{algorithm}{Procedure}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\newtheorem{mydef}{Definition}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+
+
+\usepackage{graphicx}
+\graphicspath{{../images/}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{UPC - Discrete and algorithmic geometry} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Problem sheet 2  \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Simon Van den Eynde \\ Petar Hlad Colic} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section{Nonrational Pentagon}
+Given the incidences we have given, we should show that the inner pentagon is regular, then we can use http://mathworld.wolfram.com/Pentagon.html to show the construction cannot be realised with rational coordinates.
+
+\section{6.9: enumerate 4-polytopes with 7 vertices}
+Things we can use: \\
+a) Theorem 6.19 in Ziegler says that a Gale diagram represents a polytope iff every cocircuit has at least 2 positive elements.\\
+
+b) Their is a cyclic symmetry (+,+,-,-,-,-,+)= (+,-,-,-,-,+,-)\\
+
+c) We should also consider coinciding points (I don't know if we should think about special points as well (pyramids)).
+
+\section{6.15: 2 different 2-neighborly 4-polytopes}
+In $C_{4}(7)$ there are no tetrahedra, in the second Gale diagram we can find some, for example since CH(137) and CH(2) intersect, 4568 is a facet, since it's 3-dimensional it's a simplex.
+ 
+\section{6.17: analyse gale diagram}
+Faces are:
+235678
+
+1268
+1267
+3457
+3458
+
+14568
+14567
+12347
+12348
+
+If we have the same circuits, we have the same intersection so both 7 and 8 should lie on the line 23 and on the line 56, since these lines are different and the intersection is 1 point, they lie on the same point.
+
+Then 2356 lie in the same plane (I'm going to think a bit about this).
+
+Octahedron cannot be prescribed and the oriented matroid is not rigid, I don't know yet.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
