@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DAG sheet 3 -- Sage</title>
+        
+	
+        
+        <link type="text/css" rel="stylesheet" href="/css/main.css" />
+        
+        
+        <script type="text/javascript" src="/javascript/jquery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/javascript/dynamic/localization.js"></script>
+        <script type="text/javascript" src="/javascript/json/json2.min.js"></script>
+        
+
+<!-- trying to work around JSmol collisions with jquery--->
+<script type="text/javascript" src="/javascript/jquery/jquery-1.11.0.min.js"></script>
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="/javascript/jqueryui/css/sage/jquery-ui-1.10.4.custom.css" />
+<script type="text/javascript" src="/javascript/jqueryui/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="/javascript/jquery/plugins/farbtastic/farbtastic.css" type="text/css" />
+<script type="text/javascript" src="/javascript/jquery/plugins/farbtastic/farbtastic.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/extendedclick/jquery.event.extendedclick.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/form/jquery.form.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/jquery.bgiframe.min.js"></script>
+<link rel="stylesheet" href="/javascript/jquery/plugins/jpicker/css/jPicker-1.1.6.min.css" type="text/css" />
+<script type="text/javascript" src="/javascript/jquery/plugins/jpicker/jpicker-1.1.6.min.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="/javascript/jquery/plugins/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="/javascript/jquery/plugins/colorpicker/js/colorpicker.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/achtung/ui.achtung-mod.min.js"></script>
+
+<!-- Jmol - embedded 3D graphics **needs to be before jmol_lib.js** -->
+<script type="text/javascript" src="/jsmol/JSmol.min.nojq.js"></script>
+
+
+<script type="text/javascript" src="/javascript/sage/js/notebook_lib.js"></script>
+<script type="text/javascript" src="/javascript/dynamic/notebook_dynamic.js"></script>
+
+
+
+<script type="text/javascript" src="/javascript/mathjax/MathJax.js?config=TeX-AMS_HTML-full,../../dynamic/mathjax_sage.js"></script>
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="/javascript/sage3d/sage3d.js"></script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="/javascript/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/jeditable/jquery.jeditable.mini.js" charset="utf-8"></script>
+<script type="text/javascript" src="/javascript/sage/js/tinymce.js"></script>
+<script type="text/javascript" src="/javascript/tiny_mce/plugins/media/js/embed.js"></script>
+
+
+<script type="text/javascript">user_name= "guest";</script>
+
+<script  type="text/javascript">
+    worksheet_filename = "Simon.VandenEynde/42";
+    worksheet_name = 'DAG sheet 3';
+    
+        server_ping_while_alive();
+    
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="/javascript/sage/js/master.js"></script>
+    </head>
+    <body id="print-page"
+          class="">
+        
+<h1>DAG sheet 3</h1>
+
+
+
+
+    
+
+
+<div class="cell_input_active" id="cell_resizer"></div>
+<div class="worksheet_cell_list" id="worksheet_cell_list">
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_3" class="cell_visible">
+    <div id="cell_3" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_3" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_3"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_3">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_3">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_3">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_1" class="cell_visible">
+    <div id="cell_1" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">g = Graph([(v1,v2),(v2,v3),(v3,v1)])
+g&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_1" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_1"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_1">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_1">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_1">
+                                    <img src="/home/Simon.VandenEynde/42/cells/1/sage0.png?1481467791">
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_2" class="cell_visible">
+    <div id="cell_2" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">v1=(1,1,1,1,0,0,0,0)
+v2=(1,1,1,0,1,0,0,0)
+v3=(1,1,0,0,1,1,0,0)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_2" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_2"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_2">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_2">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_2">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_5" class="cell_visible">
+    <div id="cell_5" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def compareLists(list1,list2):
+    sum=0
+    for i in [0..len(list1)-1]:
+        if(list1[i] != list2[i]): sum+=1
+    return sum==2&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_5" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_5"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_5">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_5">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_5">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_4" class="cell_visible">
+    <div id="cell_4" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">compareLists(v1,v2)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_4" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_4"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_4">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_4">
+                                
+                                    <pre class="shrunk">1
+2
+3
+3
+3
+3
+3
+3
+True</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_4">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_6" class="cell_visible">
+    <div id="cell_6" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def numToList(num):
+    l = []
+    for i in [3,2,1,0]:
+        l.append(mod(floor(num/10^i),10))
+    l2=[]
+    for i in [0..7]:
+        if i+1 in l: l2.append(1)
+        else: l2.append(0)
+    return(l2)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_6" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_6"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_6">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_6">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_6">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_14" class="cell_visible">
+    <div id="cell_14" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def numberListToSignList(l,length):
+    l2 = []
+    for i in [0..length-1]:
+        if i+1 in l: l2.append(1)
+        else: l2.append(0)
+    return(l2)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_14" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_14"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_14">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_14">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_14">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_9" class="cell_visible">
+    <div id="cell_9" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">numToList(1235)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_9" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_9"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_9">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_9">
+                                
+                                    <pre class="shrunk">[1, 1, 1, 0, 1, 0, 0, 0]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_9">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_13" class="cell_visible">
+    <div id="cell_13" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">evenVertices = []
+for i in [1..5]:
+    for j in [i+2..7]:
+        l=[i,i+1,j,j+1]
+        evenVertices.append(numberListToSignList(l,8))
+for i in [2..6]:
+    evenVertices.append(numberListToSignList([1,i,i+1,8],8))&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_13" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_13"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_13">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_13">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_13">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_15" class="cell_visible">
+    <div id="cell_15" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">evenVertices&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_15" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_15"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_15">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_15">
+                                
+                                    <pre class="shrunk">[[1, 1, 1, 1, 0, 0, 0, 0],
+ [1, 1, 0, 1, 1, 0, 0, 0],
+ [1, 1, 0, 0, 1, 1, 0, 0],
+ [1, 1, 0, 0, 0, 1, 1, 0],
+ [1, 1, 0, 0, 0, 0, 1, 1],
+ [0, 1, 1, 1, 1, 0, 0, 0],
+ [0, 1, 1, 0, 1, 1, 0, 0],
+ [0, 1, 1, 0, 0, 1, 1, 0],
+ [0, 1, 1, 0, 0, 0, 1, 1],
+ [0, 0, 1, 1, 1, 1, 0, 0],
+ [0, 0, 1, 1, 0, 1, 1, 0],
+ [0, 0, 1, 1, 0, 0, 1, 1],
+ [0, 0, 0, 1, 1, 1, 1, 0],
+ [0, 0, 0, 1, 1, 0, 1, 1],
+ [0, 0, 0, 0, 1, 1, 1, 1],
+ [1, 1, 1, 0, 0, 0, 0, 1],
+ [1, 0, 1, 1, 0, 0, 0, 1],
+ [1, 0, 0, 1, 1, 0, 0, 1],
+ [1, 0, 0, 0, 1, 1, 0, 1],
+ [1, 0, 0, 0, 0, 1, 1, 1]]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_15">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_16" class="cell_visible">
+    <div id="cell_16" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def edgeList(vertices):
+    edges=[]
+    for v1 in vertices:
+        for v2 in vertices:
+            if(compareLists(v1,v2)): edges.append((tuple(v1),tuple(v2)))
+    return edges&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_16" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_16"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_16">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_16">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_16">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_17" class="cell_visible">
+    <div id="cell_17" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">g=Graph(edgeList(evenVertices),multiedges=False)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_17" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_17"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_17">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_17">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_17">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_18" class="cell_visible">
+    <div id="cell_18" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">g.plot()&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_18" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_18"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_18">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_18">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_18">
+                                    <img src="/home/Simon.VandenEynde/42/cells/18/sage0.png?1481469690">
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_19" class="cell_visible">
+    <div id="cell_19" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">nums = [5678,1278,2378,1238,2367,1267,2356,1256,1458,3478,1348,3456,3467,1234,1245,2345,1567,1578,4568,4678]
+vertices=[]
+for i in nums:
+    vertices.append(numToList(i))
+edgeList(vertices)
+g2=Graph(edgeList(vertices),multiedges=False)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_19" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_19"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_19">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_19">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_19">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_20" class="cell_visible">
+    <div id="cell_20" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">g2.plot()&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_20" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_20"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_20">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_20">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_20">
+                                    <img src="/home/Simon.VandenEynde/42/cells/20/sage0.png?1481470478">
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_21" class="cell_visible">
+    <div id="cell_21" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">g.is_isomorphic(g2)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_21" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_21"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_21">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_21">
+                                
+                                    <pre class="shrunk">False</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_21">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_27" class="cell_visible">
+    <div id="cell_27" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_27" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_27"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_27">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_27">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_27">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_28" class="cell_visible">
+    <div id="cell_28" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def facets(signVector):
+    cofacets = []
+    facets = []
+    for i in [0..len(signVector)-3]:
+        for j in [i+1..len(signVector)-2]:
+            for k in [j+1..len(signVector)-1]:
+                if(signVector[i]==signVector[k] and signVector[i]!=signVector[j]):
+                    cofacets.append([i+1,j+1,k+1])
+                    facets.append(numberListToSignList([i+1,j+1,k+1],len(signVector)))
+    return facets&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_28" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_28"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_28">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_28">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_28">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_33" class="cell_visible">
+    <div id="cell_33" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def checkValidGale(signVector):
+    
+    for j in [0..len(signVector)-1]:
+        sum=0
+        for i in [0..len(signVector)-1]:
+            if(i&lt;j): sum += abs(signVector[i]-1)
+            else: sum+=signVector[i]
+        if(sum&lt;2 or sum&gt;len(signVector)-2): 
+            return False
+    return True&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_33" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_33"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_33">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_33">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_33">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_34" class="cell_visible">
+    <div id="cell_34" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">checkValidGale([1,0,1,0,0,1])&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_34" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_34"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_34">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_34">
+                                
+                                    <pre class="shrunk">True</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_34">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_32" class="cell_visible">
+    <div id="cell_32" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">facets([1,0,0,0,0,1])&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_32" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_32"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_32">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_32">
+                                
+                                    <pre class="shrunk">[[1, 1, 0, 0, 0, 1],
+ [1, 0, 1, 0, 0, 1],
+ [1, 0, 0, 1, 0, 1],
+ [1, 0, 0, 0, 1, 1]]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_32">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_35" class="cell_visible">
+    <div id="cell_35" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def checkIsomorphicGales(gale1,gale2):
+    g1 = Graph(edgeList(facets(gale1)),multiedges=False)
+    g2 = Graph(edgeList(facets(gale2)),multiedges=False)
+    return g1.is_isomorphic(g2)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_35" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_35"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_35">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_35">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_35">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_31" class="cell_visible">
+    <div id="cell_31" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">checkIsomorphicGales([0,1,1,0,0,1],[1,1,0,0,1,1])&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_31" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_31"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_31">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_31">
+                                
+                                    <pre class="shrunk">True</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_31">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_38" class="cell_visible">
+    <div id="cell_38" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def numberToBinaryList(num,size):
+    binNum = bin(num)[2:]
+    binList=[]
+    for i in [len(binNum)..size-1]:
+        binList.append(0)
+    for i in [len(binNum)-1,len(binNum)-2..0]:
+        if(binNum[i]==&#39;1&#39;): binList.append(1)
+        else: binList.append(0)
+    return binList&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_38" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_38"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_38">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_38">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_38">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_37" class="cell_visible">
+    <div id="cell_37" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">numberToBinaryList(10,7)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_37" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_37"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_37">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_37">
+                                
+                                    <pre class="shrunk">[0, 0, 0, 0, 1, 0, 1]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_37">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_36" class="cell_visible">
+    <div id="cell_36" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">galeDiagrams=[]
+for i in [0..2^7-1]:  
+    signVector=numberToBinaryList(i,7)
+    if(checkValidGale(signVector)): galeDiagrams.append(signVector)
+    
+fakeGaleDiagramIndices=[]
+realGaleDiagrams=[]
+for i in [0..len(galeDiagrams)-1]:
+    if i in fakeGaleDiagramIndices: continue
+    for j in [i+1..len(galeDiagrams)-1]:
+        if(checkIsomorphic(galeDiagrams[i],galeDiagrams[j])): fakeGaleDiagramIndices.append(j)
+    realGaleDiagrams.append(galeDiagrams[i])&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_36" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_36"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_36">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_36">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_36">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_39" class="cell_visible">
+    <div id="cell_39" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">realGaleDiagrams&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_39" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_39"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_39">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_39">
+                                
+                                    <pre class="shrunk">[[0, 0, 1, 1, 0, 0, 1],
+ [0, 0, 1, 0, 1, 0, 1],
+ [0, 1, 0, 1, 0, 0, 1],
+ [0, 1, 0, 0, 1, 0, 1],
+ [1, 0, 1, 0, 1, 0, 1]]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_39">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_29" class="cell_visible">
+    <div id="cell_29" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">Graph(edgeList(facets([1, 0, 1, 0, 1, 0, 1])),multiedges=False,loops=False).plot()&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_29" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_29"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_29">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_29">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_29">
+                                    <img src="/home/Simon.VandenEynde/42/cells/29/sage0.png?1481477848">
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_30" class="cell_visible">
+    <div id="cell_30" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_30" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tr>
+                    <td class="cell_number" id="cell_number_30"
+                         >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_30">
+                            <div class="cell_output_print_wrap"
+                                id="cell_output_30">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap"
+                                     id="cell_output_html_30">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+</div>
+<!--    <script>
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>-->
+
+    </body>
+</html>
