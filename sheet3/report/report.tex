@@ -98,10 +98,28 @@ b) Their is a cyclic symmetry (+,+,-,-,-,-,+)= (+,-,-,-,-,+,-)\\
 c) We should also consider coinciding points (I don't know if we should think about special points as well (pyramids)).
 
 \section{6.15: 2 different 2-neighborly 4-polytopes}
-We can easily check that both polytopes are $2$-neighborly, since removing any two points from the Gale diagram and then taking the convex hull of the positive and of the negative points, we find that these intersect. Thus the two removed points form an edge. I checked this manually, but I haven't written this down, using symmetries you should have to check around $30$ intersections.
+We can easily check that both polytopes are $2$-neighborly, since removing any two points from the Gale diagram and then taking the convex hull of the positive and of the negative points, we find that these intersect. Thus the two removed points form an edge. I checked this manually, but I haven't written this down, using symmetries you should have to check around $30$ intersections.\\
 
-We can also see that both Gale diagrams represent different polytopes. In the left Gale diagram there are no 
-In $C_{4}(7)$ there are no tetrahedra, in the second Gale diagram we can find some, for example since CH(137) and CH(2) intersect, 4568 is a facet, since it's 3-dimensional it's a simplex.
+If we write down all facets from the first Gale diagram, using the fact that cocircuits define cofacets. And also from $C_4(8)$, using Gale's evenness criterium, we find that exactly the same structure appears (even the naming is already correct). If we write down the facets from the second Gale diagram, we note there are differences, since their are different convex hulls (we also get the intersection of a triangle and a point).\\
+
+To make sure that the second graph differs from the first, we used the sagemath graph library (a python-based mathematical computer language) to compare the graphs of the facetstructure. I generated images for both graphs: see figure~\ref{fig:1} and figure~\ref{fig:2}. Using the isomorphism-function of the graph library, we find that both graphs are different.
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=\textwidth]{C4(8)} 
+   \caption{The facet-graph of C4(8). Vertices are facets, and edges represent ridges between two facets.}
+   \label{fig:1}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=\textwidth]{secondGale} 
+   \caption{The facet-graph of the second Gale diagram. Vertices are facets, and edges represent ridges between two facets.}
+   \label{fig:2}
+\end{figure}
+
+
+
  
 \section{6.17: analyse gale diagram}
 We can find the facets by finding cocircuits in the Gale diagram. For example the convex hull of $\{1\}$ and $\{4\}$ intersect, so 14 is a cofacet and 235678 a facet of $P$. To check that this is an octahedron, we lift $14$ to infinity, and put the rest on one line, we get as Gale diagram a line with following points: $2^-,3^+6^+,7^-8^-,5^+$. If we look at the facet structure of the polytope with this Gale diagram, we see the polytope is $4$-regular, has $2$ vertices $2$ and $5$ which are neighbours of $3,6,7,8$ and that $3\sim 78,6\sim 78, 7\not\sim 8$ and $3\not\sim 6$. This is exactly the incidence structure of an octahedron.
