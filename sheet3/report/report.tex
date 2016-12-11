@@ -98,27 +98,25 @@ b) Their is a cyclic symmetry (+,+,-,-,-,-,+)= (+,-,-,-,-,+,-)\\
 c) We should also consider coinciding points (I don't know if we should think about special points as well (pyramids)).
 
 \section{6.15: 2 different 2-neighborly 4-polytopes}
+We can easily check that both polytopes are $2$-neighborly, since removing any two points from the Gale diagram and then taking the convex hull of the positive and of the negative points, we find that these intersect. Thus the two removed points form an edge. I checked this manually, but I haven't written this down, using symmetries you should have to check around $30$ intersections.
+
+We can also see that both Gale diagrams represent different polytopes. In the left Gale diagram there are no 
 In $C_{4}(7)$ there are no tetrahedra, in the second Gale diagram we can find some, for example since CH(137) and CH(2) intersect, 4568 is a facet, since it's 3-dimensional it's a simplex.
  
 \section{6.17: analyse gale diagram}
-Faces are:
-235678
+We can find the facets by finding cocircuits in the Gale diagram. For example the convex hull of $\{1\}$ and $\{4\}$ intersect, so 14 is a cofacet and 235678 a facet of $P$. To check that this is an octahedron, we lift $14$ to infinity, and put the rest on one line, we get as Gale diagram a line with following points: $2^-,3^+6^+,7^-8^-,5^+$. If we look at the facet structure of the polytope with this Gale diagram, we see the polytope is $4$-regular, has $2$ vertices $2$ and $5$ which are neighbours of $3,6,7,8$ and that $3\sim 78,6\sim 78, 7\not\sim 8$ and $3\not\sim 6$. This is exactly the incidence structure of an octahedron.
 
-1268
-1267
-3457
-3458
+For example we also find the cofacet 3457 which results in a facet 1268. Because this facet has $4$ vertices in dimension $3$, it is a simplex. We find some other simplices: $1267,3457,3458$.
 
-14568
-14567
-12347
-12348
+We also find facets: $14568,14567,12347,12348$. To be a square pyramid they need a special point (a zero-point which is non-plus and non-negative), but I don't know how to get one.\\
 
-If we have the same circuits, we have the same intersection so both 7 and 8 should lie on the line 23 and on the line 56, since these lines are different and the intersection is 1 point, they lie on the same point.
+If we have the same circuits, we have the same intersections in our Gale diagram so both 7 and 8 should lie on the line 23 and on the line 56, since these lines are different and the intersection is a single point, they must lie on the same point.\\
 
-Then 2356 lie in the same plane (I'm going to think a bit about this).
+XXX Then 2356 lie in the same plane.\\
 
-Octahedron cannot be prescribed and the oriented matroid is not rigid, I don't know yet.
+Since 2356 must be coplanar, we cannot chose all of them freely and the octahedral facet cannot be prescribed.\\
+
+XXX The oriented matroid is not rigid, I don't know yet.
 
 \end{document}
 
