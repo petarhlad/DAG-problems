@@ -90,17 +90,26 @@
 Given the incidences we have given, we should show that the inner pentagon is regular, then we can use http://mathworld.wolfram.com/Pentagon.html to show the construction cannot be realised with rational coordinates.
 
 \section{6.9: enumerate 4-polytopes with 7 vertices}
-Things we can use: \\
-a) Theorem 6.19 in Ziegler says that a Gale diagram represents a polytope iff every cocircuit has at least 2 positive elements.\\
 
-b) Their is a cyclic symmetry (+,+,-,-,-,-,+)= (+,-,-,-,-,+,-)\\
+To enumerate all 4-polytopes with 7-vertices, we started considering only these with a Gale diagram without special points and without coinciding points. For finding these polytopes we wrote an algorithm.\\
 
-c) We should also consider coinciding points (I don't know if we should think about special points as well (pyramids)).
+We start considering all possible Gale diagrams, this is a list of $7$ $+$'s and $-$'s. First we filtered all diagrams that couldn't come from a polytope. For doing this, we used Theorem 6.19 in Ziegler, which says that a Gale diagram relates to a polytope $\iff$ every cocircuit has at least $2$ positive elements. This we can check by, for every index, checking the plusses after the index and the minuses before the index and making sure they sum up to at least $2$.\\
+
+Then we filtered out the isomorphism, by creating the graph of the facet structure and check wether these are isomorphic. For checking this we used a graphlibrary.\\
+
+Finally we find $5$ non-isomorphic Gale diagrams:
+\[[0, 0, 1, 1, 0, 0, 1],
+ [0, 0, 1, 0, 1, 0, 1],
+ [0, 1, 0, 1, 0, 0, 1],
+ [0, 1, 0, 0, 1, 0, 1],
+ [1, 0, 1, 0, 1, 0, 1]\]
+ 
+
 
 \section{6.15: 2 different 2-neighborly 4-polytopes}
 We can easily check that both polytopes are $2$-neighborly, since removing any two points from the Gale diagram and then taking the convex hull of the positive and of the negative points, we find that these intersect. Thus the two removed points form an edge. I checked this manually, but I haven't written this down, using symmetries you should have to check around $30$ intersections.\\
 
-If we write down all facets from the first Gale diagram, using the fact that cocircuits define cofacets. And also from $C_4(8)$, using Gale's evenness criterium, we find that exactly the same structure appears (even the naming is already correct). If we write down the facets from the second Gale diagram, we note there are differences, since their are different convex hulls (we also get the intersection of a triangle and a point).\\
+If we write down all facets from the first Gale diagram, using the fact that circuits define cofacets. And also from $C_4(8)$, using Gale's evenness criterium, we find that exactly the same structure appears (even the naming is already correct). If we write down the facets from the second Gale diagram, we note there are differences, since their are different convex hulls (we also get the intersection of a triangle and a point).\\
 
 To make sure that the second graph differs from the first, we used the sagemath graph library (a python-based mathematical computer language) to compare the graphs of the facetstructure. I generated images for both graphs: see figure~\ref{fig:1} and figure~\ref{fig:2}. Using the isomorphism-function of the graph library, we find that both graphs are different.
 
@@ -122,7 +131,7 @@ To make sure that the second graph differs from the first, we used the sagemath 
 
  
 \section{6.17: analyse gale diagram}
-We can find the facets by finding cocircuits in the Gale diagram. For example the convex hull of $\{1\}$ and $\{4\}$ intersect, so 14 is a cofacet and 235678 a facet of $P$. To check that this is an octahedron, we lift $14$ to infinity, and put the rest on one line, we get as Gale diagram a line with following points: $2^-,3^+6^+,7^-8^-,5^+$. If we look at the facet structure of the polytope with this Gale diagram, we see the polytope is $4$-regular, has $2$ vertices $2$ and $5$ which are neighbours of $3,6,7,8$ and that $3\sim 78,6\sim 78, 7\not\sim 8$ and $3\not\sim 6$. This is exactly the incidence structure of an octahedron.
+We can find the facets by finding circuits in the Gale diagram. For example the convex hull of $\{1\}$ and $\{4\}$ intersect, so 14 is a cofacet and 235678 a facet of $P$. To check that this is an octahedron, we lift $14$ to infinity, and put the rest on one line, we get as Gale diagram a line with following points: $2^-,3^+6^+,7^-8^-,5^+$. If we look at the facet structure of the polytope with this Gale diagram, we see the polytope is $4$-regular, has $2$ vertices $2$ and $5$ which are neighbours of $3,6,7,8$ and that $3\sim 78,6\sim 78, 7\not\sim 8$ and $3\not\sim 6$. This is exactly the incidence structure of an octahedron.
 
 For example we also find the cofacet 3457 which results in a facet 1268. Because this facet has $4$ vertices in dimension $3$, it is a simplex. We find some other simplices: $1267,3457,3458$.
 
