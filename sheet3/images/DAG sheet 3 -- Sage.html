@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DAG sheet 3 -- Sage</title>
+        
+	
+        
+        <link type="text/css" rel="stylesheet" href="/css/main.css" />
+        
+        
+        <script type="text/javascript" src="/javascript/jquery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/javascript/dynamic/localization.js"></script>
+        <script type="text/javascript" src="/javascript/json/json2.min.js"></script>
+        
+
+<!-- trying to work around JSmol collisions with jquery--->
+<script type="text/javascript" src="/javascript/jquery/jquery-1.11.0.min.js"></script>
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="/javascript/jqueryui/css/sage/jquery-ui-1.10.4.custom.css" />
+<script type="text/javascript" src="/javascript/jqueryui/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="/javascript/jquery/plugins/farbtastic/farbtastic.css" type="text/css" />
+<script type="text/javascript" src="/javascript/jquery/plugins/farbtastic/farbtastic.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/extendedclick/jquery.event.extendedclick.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/form/jquery.form.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/jquery.bgiframe.min.js"></script>
+<link rel="stylesheet" href="/javascript/jquery/plugins/jpicker/css/jPicker-1.1.6.min.css" type="text/css" />
+<script type="text/javascript" src="/javascript/jquery/plugins/jpicker/jpicker-1.1.6.min.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="/javascript/jquery/plugins/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="/javascript/jquery/plugins/colorpicker/js/colorpicker.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/achtung/ui.achtung-mod.min.js"></script>
+
+<!-- Jmol - embedded 3D graphics **needs to be before jmol_lib.js** -->
+<script type="text/javascript" src="/jsmol/JSmol.min.nojq.js"></script>
+
+
+<script type="text/javascript" src="/javascript/sage/js/notebook_lib.js"></script>
+<script type="text/javascript" src="/javascript/dynamic/notebook_dynamic.js"></script>
+
+
+
+<script type="text/javascript" src="/javascript/mathjax/MathJax.js?config=TeX-AMS_HTML-full,../../dynamic/mathjax_sage.js"></script>
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="/javascript/sage3d/sage3d.js"></script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="/javascript/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="/javascript/jquery/plugins/jeditable/jquery.jeditable.mini.js" charset="utf-8"></script>
+<script type="text/javascript" src="/javascript/sage/js/tinymce.js"></script>
+<script type="text/javascript" src="/javascript/tiny_mce/plugins/media/js/embed.js"></script>
+
+
+<script type="text/javascript">user_name= "Simon.VandenEynde";</script>
+
+<script  type="text/javascript">
+    worksheet_filename = "Simon.VandenEynde/42";
+    worksheet_name = 'DAG sheet 3';
+    
+        server_ping_while_alive();
+    
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="/javascript/sage/js/master.js"></script>
+    </head>
+    <body id=""
+          class="">
+        
+        <div id="header">
+            
+            <div id="top-bar">
+                <div id="banner">
+                    <a class="banner" href="/">
+                        <img align="top" src="/images/sagenb.png" alt="Sage" /><span>The Sage Notebook</span>
+                    </a>
+                    <span class="ping" id="ping">Searching for Sage server...</span>
+                    <div class="version">
+                        Version 7.4
+                    </div>
+                </div>
+                
+<div id="main-controls" class="controls">
+    <ul>
+        <li class="username">Simon.VandenEynde</li>
+        
+        <li><a id="toggle-link" title="Toggle the top bar" onClick="$('#worksheet-bar').toggle()">Toggle</a></li>
+        <li><a title="Back to your personal worksheet list" href="/home/Simon.VandenEynde">Home</a></li>
+        
+        <li><a title="Browse the published worksheets" href="/pub">Published</a></li>
+        <li><a title="View a log of recent computations" href="#" onClick="history_window()">Log</a></li>
+        
+        <li><a title="Change account settings including password" href="/settings">Settings</a></li>
+        <li><a title="Documentation" href="#" onClick="help()">Help</a></li>
+        <li><a title="Report a problem or submit a bug to improve Sage" href="#" onClick="bugreport()">Report a Problem</a></li>
+        <li><a title="Log out of the Sage notebook" href="/logout">Sign out</a></li>
+        
+    </ul>
+</div>
+
+            </div>
+            
+        </div>
+        <div id="main">
+            
+
+
+<div id="worksheet-bar">
+    <div class="worksheet_title">
+        <a id="worksheet_title" class="worksheet_title"
+           onClick="rename_worksheet(); return false;"
+           title="Click to rename this worksheet">
+            DAG sheet 3
+        </a>
+        <div><span class="lastedit">last edited 
+<span class="lastedit">Dec 11, 2016, 6:47:30 PM by Simon.VandenEynde</span></span></div>
+        
+    </div>
+    <div id="save-discard-buttons">
+        
+        <button name="button_save" title="Save changes" onClick="save_worksheet();">Save</button><button title="Save changes and close window" onClick="save_worksheet_and_close();" name="button_save">Save &amp; quit</button><button title="Discard changes to this worksheet" onClick="worksheet_discard();">Discard &amp; quit</button>
+        
+    </div>
+
+    <div id="worksheet-menu">
+    
+        <select class="worksheet"  onchange="go_option(this);" id="file-menu">
+            <option title="Select a file related function" value=""  selected>File...</option>
+            <option title="Load a new worksheet stored in a file" value="upload_worksheet_button();">Load worksheet from a file...</option>
+            <option title="Create a new worksheet" value="new_worksheet();">New worksheet</option>
+            <option title="Save this worksheet to an sws file" value="download_worksheet();">Save worksheet to a file...</option>
+            <option title="Print this worksheet" value="print_worksheet();">Print</option>
+            <option title="Rename this worksheet" value="rename_worksheet();">Rename worksheet</option>
+            <option title="Copy this worksheet" value="copy_worksheet();">Copy worksheet</option>
+            <option title="Move this worksheet to the trash" value="delete_worksheet('Simon.VandenEynde/42');">Delete worksheet</option>
+        </select>
+
+        <select class="worksheet"  onchange="go_option(this);"  id="action-menu">
+            <option title="Select a worksheet function" value="" selected>Action...</option>
+            <option title="Interrupt currently running calculations, if possible" value="interrupt();">Interrupt</option>
+            <option title="Restart the worksheet process" value="restart_sage();">Restart worksheet</option>
+            <option title="Quit the worksheet process" value="save_worksheet_and_close();">Save and quit worksheet</option> 
+            <option value="">---------------------------</option>
+            <option title="Evaluate all input cells in the worksheet" value="evaluate_all();">Evaluate All</option>
+            <option title="Hide all output" value="hide_all();">Hide All Output</option>
+            <option title="Show all output" value="show_all();">Show All Output</option>
+            <option title="Delete all output" value="delete_all_output();">Delete All Output</option>
+            <option value="">---------------------------</option>
+            <option title="Switch to single-cell mode" value="slide_mode();">One Cell Mode</option>
+            <option title="Switch to multi-cell mode" value="cell_mode();">Multi Cell Mode</option> 
+        </select>
+        <select class="worksheet" onchange="handle_data_menu(this);" id="data-menu">
+            <option title="Select an attached file" value="" selected>Data...</option>
+            <option title="Upload or create a data file in a wide range of formats" value="__upload_data_file__">Upload or create file...</option>
+            <option value="">--------------------</option>
+            
+        </select>
+
+        
+        <select onchange="go_system_select(this, 0);" class="worksheet" id="systems-menu">
+            
+            <option title="Evaluate all input cells using sage"
+                    selected value="sage">
+                sage
+            </option>
+            
+            <option title="Evaluate all input cells using gap"
+                     value="gap">
+                gap
+            </option>
+            
+            <option title="Evaluate all input cells using gp"
+                     value="gp">
+                gp
+            </option>
+            
+            <option title="Evaluate all input cells using html"
+                     value="html">
+                html
+            </option>
+            
+            <option title="Evaluate all input cells using latex"
+                     value="latex">
+                latex
+            </option>
+            
+            <option title="Evaluate all input cells using maxima"
+                     value="maxima">
+                maxima
+            </option>
+            
+            <option title="Evaluate all input cells using python"
+                     value="python">
+                python
+            </option>
+            
+            <option title="Evaluate all input cells using r"
+                     value="r">
+                r
+            </option>
+            
+            <option title="Evaluate all input cells using sh"
+                     value="sh">
+                sh
+            </option>
+            
+            <option title="Evaluate all input cells using singular"
+                     value="singular">
+                singular
+            </option>
+            
+            <option title="Evaluate all input cells using axiom"
+                     value="axiom">
+                axiom (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using fricas"
+                     value="fricas">
+                fricas (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using kash"
+                     value="kash">
+                kash (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using macaulay2"
+                     value="macaulay2">
+                macaulay2 (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using magma"
+                     value="magma">
+                magma (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using maple"
+                     value="maple">
+                maple (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using mathematica"
+                     value="mathematica">
+                mathematica (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using matlab"
+                     value="matlab">
+                matlab (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using mupad"
+                     value="mupad">
+                mupad (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using octave"
+                     value="octave">
+                octave (optional)
+            </option>
+            
+            <option title="Evaluate all input cells using scilab"
+                     value="scilab">
+                scilab (optional)
+            </option>
+            
+        </select>    
+        <input type="checkbox" title="Enable/disable pretty_printing"
+               onchange="pretty_print_check(this.checked);"
+               class="worksheet" value="pretty_print"  />&nbsp;Typeset
+        <input id="3D_check", type="checkbox" title="Load 3-D Live. Not recommended for worksheets with &gt; 2 3-D Plots."
+               onchange="live_3D_check(this.checked);"
+               class="worksheet" value="live_3D"  />&nbsp;Load 3-D Live
+        <input id="3D_use_java", type="checkbox" title="Use java for 3-D. Only applies to this running of worksheet."
+               onchange="3D_use_java_check(this.checked);"
+               class="worksheet" value="3D_use_java"/>&nbsp;Use java for 3-D
+         
+     
+    </div>
+    <div id="share-publish-buttons">
+        
+        
+        <a title="Print this worksheet" class="control" onClick="print_worksheet()">Print</a>
+        <a class="
+        control
+        " title="Interactively use this worksheet" href="./">Worksheet</a>        
+        <a class="
+        control
+        " title="Edit text version of this worksheet" href="edit">Edit</a>
+        <a class="
+        control-select
+        " title="View plain text version of this worksheet" href="text">Text</a>
+        <a class="
+        control
+        " title="View changes to this worksheet over time" href="revisions">Revisions</a>
+        <a class="
+        control
+        " title="Let others edit this worksheet" href="share">Share</a>
+        <a class="
+        control
+        " title="Make this worksheet publicly viewable" href="publish">Publish</a>
+        
+    </div>
+</div>
+<div class="hidden" id="slide_controls">
+    <div class="slideshow_control">
+        <a class="slide_arrow" onClick="slide_next()">&gt;</a>
+        <a class="slide_arrow" onClick="slide_last()">&gt;&gt;</a> <span class="vbar"></span>
+        <a class="cell_mode" onClick="cell_mode()">Exit</a>
+    </div>
+    <div class="slideshow_progress" id="slideshow_progress" onClick="slide_next()">
+        <div class="slideshow_progress_bar" id="slideshow_progress_bar">&nbsp;</div>
+        <div class="slideshow_progress_text" id="slideshow_progress_text">&nbsp;</div>
+    </div>
+    <div class="slideshow_control">
+        <a class="slide_arrow" onClick="slide_first()">&lt;&lt;</a>
+        <a class="slide_arrow" onClick="slide_prev()">&lt;</a>
+    </div>
+</div>
+
+
+<div class="sharebar">
+View plain text
+</div>
+
+<pre class="plaintext" id="cell_intext" name="textfield">sage: g = Graph([(v1,v2),(v2,v3),(v3,v1)])
+sage: g
+sage: v1=(1,1,1,1,0,0,0,0)
+sage: v2=(1,1,1,0,1,0,0,0)
+sage: v3=(1,1,0,0,1,1,0,0)
+sage: def compareLists(list1,list2):
+...       sum=0
+...       for i in [0..len(list1)-1]:
+...           if(list1[i] != list2[i]): sum+=1
+...       return sum==2
+sage: compareLists(v1,v2)
+1
+2
+3
+3
+3
+3
+3
+3
+True
+sage: def numToList(num):
+...       l = []
+...       for i in [3,2,1,0]:
+...           l.append(mod(floor(num/10^i),10))
+...       l2=[]
+...       for i in [0..7]:
+...           if i+1 in l: l2.append(1)
+...           else: l2.append(0)
+...       return(l2)
+sage: def numberListToSignList(l,length):
+...       l2 = []
+...       for i in [0..length-1]:
+...           if i+1 in l: l2.append(1)
+...           else: l2.append(0)
+...       return(l2)
+sage: numToList(1235)
+[1, 1, 1, 0, 1, 0, 0, 0]
+sage: evenVertices = []
+sage: for i in [1..5]:
+...       for j in [i+2..7]:
+...           l=[i,i+1,j,j+1]
+...           evenVertices.append(numberListToSignList(l,8))
+...
+sage: for i in [2..6]:
+...       evenVertices.append(numberListToSignList([1,i,i+1,8],8))
+sage: evenVertices
+[[1, 1, 1, 1, 0, 0, 0, 0],
+ [1, 1, 0, 1, 1, 0, 0, 0],
+ [1, 1, 0, 0, 1, 1, 0, 0],
+ [1, 1, 0, 0, 0, 1, 1, 0],
+ [1, 1, 0, 0, 0, 0, 1, 1],
+ [0, 1, 1, 1, 1, 0, 0, 0],
+ [0, 1, 1, 0, 1, 1, 0, 0],
+ [0, 1, 1, 0, 0, 1, 1, 0],
+ [0, 1, 1, 0, 0, 0, 1, 1],
+ [0, 0, 1, 1, 1, 1, 0, 0],
+ [0, 0, 1, 1, 0, 1, 1, 0],
+ [0, 0, 1, 1, 0, 0, 1, 1],
+ [0, 0, 0, 1, 1, 1, 1, 0],
+ [0, 0, 0, 1, 1, 0, 1, 1],
+ [0, 0, 0, 0, 1, 1, 1, 1],
+ [1, 1, 1, 0, 0, 0, 0, 1],
+ [1, 0, 1, 1, 0, 0, 0, 1],
+ [1, 0, 0, 1, 1, 0, 0, 1],
+ [1, 0, 0, 0, 1, 1, 0, 1],
+ [1, 0, 0, 0, 0, 1, 1, 1]]
+sage: def edgeList(vertices):
+...       edges=[]
+...       for v1 in vertices:
+...           for v2 in vertices:
+...               if(compareLists(v1,v2)): edges.append((tuple(v1),tuple(v2)))
+...       return edges
+sage: g=Graph(edgeList(evenVertices),multiedges=False)
+sage: g.plot()
+sage: nums = [5678,1278,2378,1238,2367,1267,2356,1256,1458,3478,1348,3456,3467,1234,1245,2345,1567,1578,4568,4678]
+sage: vertices=[]
+sage: for i in nums:
+...       vertices.append(numToList(i))
+...
+sage: edgeList(vertices)
+sage: g2=Graph(edgeList(vertices),multiedges=False)
+sage: g2.plot()
+sage: g.is_isomorphic(g2)
+False
+sage: def facets(signVector):
+...       cofacets = []
+...       facets = []
+...       for i in [0..len(signVector)-3]:
+...           for j in [i+1..len(signVector)-2]:
+...               for k in [j+1..len(signVector)-1]:
+...                   if(signVector[i]==signVector[k] and signVector[i]!=signVector[j]):
+...                       cofacets.append([i+1,j+1,k+1])
+...                       facets.append(numberListToSignList([i+1,j+1,k+1],len(signVector)))
+...       return facets
+sage: def checkValidGale(signVector):
+...       
+...       for j in [0..len(signVector)-1]:
+...           sum=0
+...           for i in [0..len(signVector)-1]:
+...               if(i&lt;j): sum += abs(signVector[i]-1)
+...               else: sum+=signVector[i]
+...           if(sum&lt;2 or sum&gt;len(signVector)-2): 
+...               return False
+...       return True
+sage: checkValidGale([1,0,1,0,0,1])
+True
+sage: facets([1,0,0,0,0,1])
+[[1, 1, 0, 0, 0, 1],
+ [1, 0, 1, 0, 0, 1],
+ [1, 0, 0, 1, 0, 1],
+ [1, 0, 0, 0, 1, 1]]
+sage: def checkIsomorphicGales(gale1,gale2):
+...       g1 = Graph(edgeList(facets(gale1)),multiedges=False)
+...       g2 = Graph(edgeList(facets(gale2)),multiedges=False)
+...       return g1.is_isomorphic(g2)
+sage: checkIsomorphicGales([0,1,1,0,0,1],[1,1,0,0,1,1])
+True
+sage: def numberToBinaryList(num,size):
+...       binNum = bin(num)[2:]
+...       binList=[]
+...       for i in [len(binNum)..size-1]:
+...           binList.append(0)
+...       for i in [len(binNum)-1,len(binNum)-2..0]:
+...           if(binNum[i]==&#39;1&#39;): binList.append(1)
+...           else: binList.append(0)
+...       return binList
+sage: numberToBinaryList(10,7)
+[0, 0, 0, 0, 1, 0, 1]
+sage: galeDiagrams=[]
+sage: for i in [0..2^7-1]:  
+...       signVector=numberToBinaryList(i,7)
+...       if(checkValidGale(signVector)): galeDiagrams.append(signVector)
+...       
+...
+sage: fakeGaleDiagramIndices=[]
+sage: realGaleDiagrams=[]
+sage: for i in [0..len(galeDiagrams)-1]:
+...       if i in fakeGaleDiagramIndices: continue
+...       for j in [i+1..len(galeDiagrams)-1]:
+...           if(checkIsomorphic(galeDiagrams[i],galeDiagrams[j])): 
+...               fakeGaleDiagramIndices.append(j)
+...               print(i,j)
+...       realGaleDiagrams.append(galeDiagrams[i])
+(0, 2)
+(0, 4)
+(0, 5)
+(0, 10)
+(0, 13)
+(0, 17)
+(0, 19)
+(0, 31)
+(0, 33)
+(0, 34)
+(0, 39)
+(1, 7)
+(1, 11)
+(1, 12)
+(1, 20)
+(1, 23)
+(1, 26)
+(1, 30)
+(1, 36)
+(1, 40)
+(3, 8)
+(3, 15)
+(3, 18)
+(3, 22)
+(3, 25)
+(3, 27)
+(3, 32)
+(3, 37)
+(6, 9)
+(6, 14)
+(6, 16)
+(6, 21)
+(6, 28)
+(6, 29)
+(6, 35)
+(6, 38)
+sage: realGaleDiagrams
+[[0, 0, 1, 1, 0, 0, 1],
+ [0, 0, 1, 0, 1, 0, 1],
+ [0, 1, 0, 1, 0, 0, 1],
+ [0, 1, 0, 0, 1, 0, 1],
+ [1, 0, 1, 0, 1, 0, 1]]
+sage: Graph(edgeList(facets([1, 0, 1, 0, 1, 0, 1])),multiedges=False,loops=False).plot()</pre>
+
+
+
+        </div>
+        
+    </body>
+</html>
